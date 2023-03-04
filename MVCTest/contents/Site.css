@@ -1,0 +1,97 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,Arial,Helvetica,sans-serif
+}
+
+header {
+    background-color: rgb(105 173 234 / 55%);
+    position:fixed;
+    z-index:2000;
+    width:100%
+}
+
+.text-logo{
+    display:inline-block;
+    text-align:center;
+}
+
+.logo-name {
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.logo-group {
+    font-weight: bold;
+    color: #054be2;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.nav-link {
+   font-size: 13px;
+   padding:19px 10px;
+    font-weight: bold;
+}
+
+.item-dropdown {
+    display:none;
+    position: absolute;
+    list-style: none;
+    text-align: left;
+    background: white;
+    width:200px;
+    padding-inline-start: 0px;
+    cursor:pointer;
+}
+
+#item:hover + .item-dropdown {
+    display: block;
+}
+
+.item-dropdown:hover{
+    display:block;
+}
+
+.about {
+    padding: 90px 0px;
+}
+
+
+.products {
+    text-align: center;
+    padding: 60px 0px;
+}
+.productsTilte {
+    background: white;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.box {
+    background: #69adea;
+    color:white;
+    padding:60px 0px;
+}
+
+.itemDesc {
+    padding-top: 35px;
+    font-size: 20px;
+}
+
+#item2 {
+    padding-top:100px;
+}
+
+#item3 {
+    padding-top: 200px;
+}
+
+
+
+

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TemplateModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="userName" />
+          </Key>
+          <Property Name="userName" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="imglogo" Type="nvarchar" MaxLength="500" />
+          <Property Name="nameLogo" Type="nvarchar" MaxLength="20" />
+          <Property Name="groupLogo" Type="nvarchar" MaxLength="20" />
+          <Property Name="slideI1img1" Type="nvarchar" MaxLength="500" />
+          <Property Name="slideI1img2" Type="nvarchar" MaxLength="500" />
+          <Property Name="slide1Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="slide2Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="slide1Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="slide2Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="main1Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="main2Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="main1Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="main2Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="main1Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="main2Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="product1Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="product2Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="product3Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="product1Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="product2Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="product3Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="product1Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="product2Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="product3Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop1Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop2Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop1address" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop2address" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop1Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop2Img" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop1Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="crop2Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="FooterDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="address" Type="nvarchar" MaxLength="500" />
+          <Property Name="gmail" Type="nvarchar" MaxLength="20" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="TemplateModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TemplateModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="userName" />
+          </Key>
+          <Property Name="userName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="imglogo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="nameLogo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="groupLogo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="slideI1img1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="slideI1img2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="slide1Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="slide2Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="slide1Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="slide2Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main1Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main2Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main1Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main2Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main1Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="main2Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product1Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product2Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product3Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product1Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product2Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product3Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product1Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product2Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="product3Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop1Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop2Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop1address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop2address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop1Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop2Img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop1Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="crop2Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FooterDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="gmail" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ContentEtities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Contents" EntityType="Self.Content" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TemplateModelStoreContainer" CdmEntityContainer="ContentEtities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="TemplateModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="TemplateModel.Content">
+              <MappingFragment StoreEntitySet="Content">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="imglogo" ColumnName="imglogo" />
+                <ScalarProperty Name="nameLogo" ColumnName="nameLogo" />
+                <ScalarProperty Name="groupLogo" ColumnName="groupLogo" />
+                <ScalarProperty Name="slideI1img1" ColumnName="slideI1img1" />
+                <ScalarProperty Name="slideI1img2" ColumnName="slideI1img2" />
+                <ScalarProperty Name="slide1Title" ColumnName="slide1Title" />
+                <ScalarProperty Name="slide2Title" ColumnName="slide2Title" />
+                <ScalarProperty Name="slide1Desc" ColumnName="slide1Desc" />
+                <ScalarProperty Name="slide2Desc" ColumnName="slide2Desc" />
+                <ScalarProperty Name="main1Title" ColumnName="main1Title" />
+                <ScalarProperty Name="main2Title" ColumnName="main2Title" />
+                <ScalarProperty Name="main1Desc" ColumnName="main1Desc" />
+                <ScalarProperty Name="main2Desc" ColumnName="main2Desc" />
+                <ScalarProperty Name="main1Img" ColumnName="main1Img" />
+                <ScalarProperty Name="main2Img" ColumnName="main2Img" />
+                <ScalarProperty Name="product1Title" ColumnName="product1Title" />
+                <ScalarProperty Name="product2Title" ColumnName="product2Title" />
+                <ScalarProperty Name="product3Title" ColumnName="product3Title" />
+                <ScalarProperty Name="product1Desc" ColumnName="product1Desc" />
+                <ScalarProperty Name="product2Desc" ColumnName="product2Desc" />
+                <ScalarProperty Name="product3Desc" ColumnName="product3Desc" />
+                <ScalarProperty Name="product1Img" ColumnName="product1Img" />
+                <ScalarProperty Name="product2Img" ColumnName="product2Img" />
+                <ScalarProperty Name="product3Img" ColumnName="product3Img" />
+                <ScalarProperty Name="crop1Title" ColumnName="crop1Title" />
+                <ScalarProperty Name="crop2Title" ColumnName="crop2Title" />
+                <ScalarProperty Name="crop1address" ColumnName="crop1address" />
+                <ScalarProperty Name="crop2address" ColumnName="crop2address" />
+                <ScalarProperty Name="crop1Img" ColumnName="crop1Img" />
+                <ScalarProperty Name="crop2Img" ColumnName="crop2Img" />
+                <ScalarProperty Name="crop1Desc" ColumnName="crop1Desc" />
+                <ScalarProperty Name="crop2Desc" ColumnName="crop2Desc" />
+                <ScalarProperty Name="FooterDesc" ColumnName="FooterDesc" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="gmail" ColumnName="gmail" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
